@@ -1,0 +1,382 @@
+{% extends 'home.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head %}
+    <title>{% block title %}About Page{% endblock %}</title>
+
+    <!-- Custom bootsrap Styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/js/bootstrap.min.js')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/static/home.css')}}"/>
+
+    <link href="{{url_for('static', filename='css/slick.css')}}"rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/font-awesome.min.css')}}"rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/default.css')}}"rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/style.css')}}"rel="stylesheet"/>
+    <script src="{{url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/slick.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <section id="page-banner" class="pt-105 pb-110 bg_cover"data-overlay="8"
+      style="background-image: url({{url_for('static', filename='images/page-banner-1.jpg')}})">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-banner-cont">
+              <h2>About Us</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="{{ url_for('view.home')}}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">About Us
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-page" class="pt-70 pb-110">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="section-title mt-50">
+              <h5>About us</h5>
+              <h2>Welcome to</h2>
+              <h2>E-Learning M-S</h2>
+            </div>
+
+            <div class="about-cont">
+              <p>
+                We have professional developers that can implement your mind
+                tasks into the coding or reality. <br /><br />
+                Additionaly good tutors that can teach you the way of coding how
+                to begin and what to choose.
+              </p>
+            </div>
+          </div>
+
+          <!-- about cont -->
+          <div class="col-lg-7">
+            <div class="about-image mt-50">
+              <img src="{{url_for('static', filename='images/about/about-2.jpg')}}"alt="About"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-items pt-60">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-10">
+              <div class="about-singel-items mt-30">
+                <span>01</span>
+                <h4>Why Choose us</h4>
+                <p>
+                  Lorem ipsum gravida nibh vel velit auctor aliquetn
+                  sollicitudirem quibibendum auci elit sollicitudirem
+                  quibibendum auci
+                </p>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 col-sm-10">
+              <div class="about-singel-items mt-30">
+                <span>02</span>
+                <h4>Our Mission</h4>
+                <p>
+                  Lorem ipsum gravida nibh vel velit auctor aliquetn
+                  sollicitudirem quibibendum auci elit sollicitudirem
+                  quibibendum auci
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10">
+              <div class="about-singel-items mt-30">
+                <span>03</span>
+                <h4>Our vission</h4>
+                <p>
+                  Lorem ipsum gravida nibh vel velit auctor aliquetn
+                  sollicitudirem quibibendum auci elit sollicitudirem
+                  quibibendum auci
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--====== COUNTER PART START ======-->
+    <div
+      id="counter-part" class="bg_cover pt-65 pb-110"data-overlay="8"
+      style="background-image: url({{url_for('static', filename='images/bg-2.jpg')}})">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter text-center mt-40">
+              <span><span class="counter">30,000</span>+</span>
+              <p>Students enrolled</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter text-center mt-40">
+              <span><span class="counter">110</span>+</span>
+              <p>Courses Uploaded</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter text-center mt-40">
+              <span><span class="counter">11,000</span>+</span>
+              <p>People certified</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter text-center mt-40">
+              <span><span class="counter">9,98</span>+</span>
+              <p>University Lectures</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="teachers-part" class="pt-65 pb-120">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="section-title mt-50 pb-35">
+              <h5>Featured Teachers</h5>
+              <h2>Meet Our teachers</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-1.jpg')}}"alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-2.jpg')}}"alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-3.jpg')}}"alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-4.jpg')}}"alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-5.jpg')}}" alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-6.jpg')}}"alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-7.jpg')}}" alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+              <div class="image">
+                <img src="{{url_for('static', filename='images/teachers/t-8.jpg')}}"alt="Teachers"/>
+              </div>
+              <div class="cont">
+                <a href="teachers-single"><h6>Mark alen</h6></a>
+                <span>Vice chencelor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonial" class="bg_cover pt-115 pb-120"data-overlay="8"
+      style="background-image: url({{url_for('static', filename='images/bg-2.jpg')}})">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title pb-40">
+              <h5>Testimonial</h5>
+              <h2>What they say</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row testimonial-slied mt-40">
+          <div class="col-lg-6">
+            <div class="singel-testimonial">
+              <div class="testimonial-thum">
+                <img src="images/testimonial/t-1.jpg" alt="Testimonial" />
+                <div class="quote"><i class="fa fa-quote-right"></i></div>
+              </div>
+              <div class="testimonial-cont">
+                <p>
+                  Aliquetn sollicitudirem quibibendum auci elit cons equat
+                  ipsutis sem nibh id elit. Duis sed odio sit amet sem nibh id
+                  elit sollicitudirem
+                </p>
+                <h6>Rubina Helen</h6>
+                <span>Bsc, Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="singel-testimonial">
+              <div class="testimonial-thum">
+                <img src="images/testimonial/t-2.jpg" alt="Testimonial" />
+                <div class="quote">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+              </div>
+              <div class="testimonial-cont">
+                <p>
+                  Aliquetn sollicitudirem quibibendum auci elit cons equat
+                  ipsutis sem nibh id elit. Duis sed odio sit amet sem nibh id
+                  elit sollicitudirem
+                </p>
+                <h6>Rubina Helen</h6>
+                <span>Bsc, Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="singel-testimonial">
+              <div class="testimonial-thum">
+                <img src="images/testimonial/t-3.jpg" alt="Testimonial" />
+                <div class="quote">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+              </div>
+              <div class="testimonial-cont">
+                <p>
+                  Aliquetn sollicitudirem quibibendum auci elit cons equat
+                  ipsutis sem nibh id elit. Duis sed odio sit amet sem nibh id
+                  elit sollicitudirem
+                </p>
+                <h6>Rubina Helen</h6>
+                <span>Bsc, Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
+      <div class="container">
+        <div class="row patnar-slied">
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="{{url_for('static', filename='images/patnar-logo/p-1.png')}}"alt="Logo"/>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="{{url_for('static', filename='images/patnar-logo/p-2.png')}}"alt="Logo"/>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="{{url_for('static', filename='images/patnar-logo/p-3.png')}}"alt="Logo"/>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="{{url_for('static', filename='images/patnar-logo/p-4.png')}}"alt="Logo"/>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="{{url_for('static', filename='images/patnar-logo/p-2.png')}}"alt="Logo"/>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="{{url_for('static', filename='images/patnar-logo/p-3.png')}}"alt="Logo"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

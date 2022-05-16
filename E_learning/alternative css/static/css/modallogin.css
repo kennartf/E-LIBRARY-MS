@@ -1,0 +1,21 @@
+.modal-login {
+  width: 350px;
+}
+
+.modal-login .modal-header {
+  position: relative;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.modal-login .modal-footer {
+  background: #f2f2f2;
+}
+
+.modal-login input[type="checkbox"] {
+  position: relative;
+  top: 1px;
+}
+
+
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block head %}
+    <title>{% block title %}Home{% endblock %}</title>
+    {% endblock %}
+
+    <!-- Custom bootsrap Styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/js/bootstrap.min.js')}}"/>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-4.1.3/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-4.1.3/js/bootstrap.min.js')}}"/>
+
+    <link href="{{url_for('static', filename='css/Style.css')}}"rel="stylesheet"/>
+    <link rel="stylesheet"href="{{ url_for('static', filename='/css/style.css')}}"/>
+    <link rel="stylesheet"href="{{ url_for('static', filename='/css/modallogin.css')}}"/>
+
+    
+  </head>
+
+  <div class="preloader">
+    <div class="loader rubix-cube">
+      <div class="layer layer-1"></div>
+      <div class="layer layer-2"></div>
+      <div class="layer layer-3 color-1"></div>
+      <div class="layer layer-4"></div>
+      <div class="layer layer-5"></div>
+      <div class="layer layer-6"></div>
+      <div class="layer layer-7"></div>
+      <div class="layer layer-8"></div>
+    </div>
+  </div>
+
+  <!-- fixed-top -->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('view.home')}}">
+        <strong>E-Library M-S</strong></a>
+        <button
+          class="navbar-toggler"type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item brand dropdown">
+              <a class="nav-link dropdown-toggle" href="#"
+                id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Dropdown
+              </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{{ url_for('view.home')}}">Home</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('view.contact')}}">Contact</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('view.about')}}">About Us</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav justify-content-end">
+            <li>
+              <a href="{{ url_for('authent.login')}}">
+              <button class="main-btn" data-bs-toggle="modal" data-bs-target="#student">
+                LogIn / Register
+              </button>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <script src="{{ url_for('static', filename='/bootstrap-5.1.3/js/bootstrap.min.js')}}"></script>
+    {% block content %}{% endblock %}
+
+    <div class="search-box">
+      <div class="serach-form">
+        <div class="closebtn">
+          <span></span>
+          <span></span>
+        </div><
+      </div>
+    </div>
+
+    
+    <footer id="footer-part">
+      <div class="footer-top pt-40 pb-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-about mt-40">
+                <div class="logo"></div>
+                <p>We have professional tutors 
+                  coding how to begin and what to choose.<br /><strong>
+                  "THE WAY TO LEARN & EARN"</strong>
+                </p>
+                <ul class="mt-20">
+                  <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                  <li><a href="#"><i class="fa fa-github"></i></a></li>
+                  <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-address mt-40">
+                <div class="footer-title pb-25">
+                  <h6>Contact Us</h6>
+                </div>
+                <ul>
+                  <li>
+                    <div class="icon"><i class="fa fa-home"></i></div>
+                    <div class="cont"><p>Ho Technical </p></div>
+                  </li>
+                  <li><div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="cont"><p>0205354322</p></div>
+                  </li>
+                  <li>
+                    <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                    <div class="cont"><p>geniusitg@gmail.com</p></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright pt-10 pb-25">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="copyright text-md-left text-center pt-15">
+                <p>All Rights Reserved 2022 @
+                  <a href="https://www.htu.edu.gh/" style="color: inherit"
+                      target="_blank">Ho Technical University
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="copyright text-md-right text-center pt-15"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+
+    <!--====== jquery js ======-->
+    <script src="{{url_for('static', filename='js/vendor/modernizr-3.6.0.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+    <!--====== Slick js ======-->
+    <script src="{{url_for('static', filename='js/slick.min.js')}}"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+
+    <!--====== Counter Up js ======-->
+    <script src="{{url_for('static', filename='js/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.counterup.min.js')}}"></script>
+
+    <!--====== Nice Select js ======-->
+    <script src="{{url_for('static', filename='js/jquery.nice-select.min.js')}}"></script>
+
+    <!--====== Nice Number js ======-->
+    <script src="{{url_for('static', filename='js/jquery.nice-number.min.js')}}"></script>
+
+    <!--====== Count Down js ======-->
+    <script src="{{url_for('static', filename='js/jquery.countdown.min.js')}}"></script>
+
+    <!--====== Validator js ======-->
+    <script src="{{url_for('static', filename='js/validator.min.js')}}"></script>
+
+    <!--====== Ajax Contact js ======-->
+    <script src="{{url_for('static', filename='js/ajax-contact.js')}}"></script>
+
+    <!--====== Main js ======-->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>

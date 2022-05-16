@@ -1,0 +1,85 @@
+{% extends 'admin_availmaster.html' %} 
+
+
+{% block head %}
+<title>{% block title %}Admin Dashboard{% endblock %}</title>
+
+<!-- Custom bootsrap Styling -->
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/css/bootstrap.min.css')}}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/js/bootstrap.min.js')}}"/>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-4.1.3/css/bootstrap.min.css')}}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-4.1.3/js/bootstrap.min.js')}}"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+{% endblock %} 
+
+{% block booksavail %}
+
+{% with messages = get_flashed_messages(with_categories=True) %} 
+  {% if messages %} {% for category, message in messages %} 
+  {% if category == "error" %}
+  <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button class="close" data-dismiss="alert" type="button">&times;</button>
+  </div>
+
+  {% else %}
+  <div class="alert alert-success alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button class="close" data-dismiss="alert" type="button">&times;</button>
+  </div>
+  {% endif %}{% endfor %}{% endif %}{% endwith %}
+
+
+<body style="background-color: #4286f4;">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Welcome to Admin Dasboard</h1>
+  <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" href="#">
+    <i class="fas fa-download fa-sm text-white-50"></i> <strong>Generate Report</strong></a>
+</div>
+<br>
+
+<body class="bg-gradient-primary">
+  <div class="container">
+    <div class="overflow-auto">
+      <div class="container">
+        <div class="card-header text-center" >
+          <h5><strong>Available books <i class="fa fa-book" style="font-size: 24px"></i></strong></h5>
+        </div>
+        <div class="overflow-auto">
+          <label for="Library"><strong>Departments</strong></label>
+          <br>
+
+          <br>
+          <table class="table table-dark table-bordered table-hover table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Issued By</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            {% for bokitem in student_books %}
+              <tr>
+                <th>{{ bokitem.id }}</th>
+                <td>{{ bokitem.stb_title }}</td>
+                <td>{{ bokitem.th_auth }}</td>
+                <td>{{ bokitem.my_category }}</td>
+                <td>{{ bokitem.nm_issuerer}}</td>
+                <td>{{ 1}}</td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{%endblock%}

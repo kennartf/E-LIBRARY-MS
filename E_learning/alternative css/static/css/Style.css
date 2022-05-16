@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500,700");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*navbar*/
+.navbar {
+  background-color: rgb(80, 77, 77) !important;
+  border-bottom: 2px solid #3f4041;
+}
+
+.navbar img {
+  max-width: 100%;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+span,
+a {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #1d2025;
+  margin: 0px;
+}
+
+h1 {
+  font-weight: 500;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #505050;
+  margin: 0px;
+}
+
+.bg_cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/*===== All Button Style =====*/
+
+.main-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #ffc600;
+  padding: 0 35px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 50px;
+  border-radius: 6px;
+  color: #07294d;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  background-color: #ffc600;
+}
+
+.main-btn:hover {
+  color: #ffc600;
+  border-color: #07294d;
+  background-color: #07294d;
+}
+
+.main-btn:disabled {
+  color: #ffc600;
+  border-color: #07294d;
+  background-color: #07294d;
+}
+
+/*=====================================================
+    2. HEADER css 
+======================================================*/
+
+/*===== Header top =====*/
+
+.header-top {
+  background-color: #07294d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header-contact {
+}
+.header-contact ul {
+}
+.header-contact ul li {
+  display: inline-block;
+  margin-right: 45px;
+}
+.header-contact ul li:last-child {
+  margin-right: 0;
+}
+
+.header-contact ul li img {
+}
+.header-contact ul li span {
+  color: #dee2e6;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.header-opening-time {
+}
+.header-opening-time p {
+  color: #dee2e6;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/*===== Header Logo support =====*/
+
+.header-logo-support {
+  border-bottom: 1px solid #cecece;
+}
+
+.support-button {
+}
+.support-button .support {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 7px;
+}
+.support-button .support .icon {
+}
+.support-button .support .cont {
+  margin-left: 15px;
+  margin-top: -2px;
+}
+.support-button .support .cont p {
+  font-size: 13px;
+  color: #8a8a8a;
+  line-height: 18px;
+}
+.support-button .support .cont span {
+  font-size: 18px;
+  color: #07294d;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.support-button .button {
+  margin-left: 60px;
+}
+
+/*===== Header Menu =====*/

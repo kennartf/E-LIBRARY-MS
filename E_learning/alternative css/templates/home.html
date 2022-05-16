@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block head %}
+    <title>{% block title %}Home Page{% endblock %}</title>
+    
+    <!-- Custom bootsrap Styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/js/bootstrap.min.js')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/static/home.css')}}"/>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='/css/navbar.css')}}"> -->
+
+    <link href="{{url_for('static', filename='css/slick.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/default.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    <script src="{{url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/slick.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-white navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('view.home')}}">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Blog</a>
+            <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+          </div>
+           <a href="#" id="search"><i class="fa fa-search"></i></a>
+        </div>
+      </div>
+    </nav> 
+    
+    <section id="slider-part" class="slider-active">
+        <div class="single-slider bg_cover pt-150" style="background-image: url({{ url_for('static', filename='images/slider/s-1.jpg')}})" data-overlay="4">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-7 col-lg-9">
+                  <div class="slider-cont">
+                    <h1 data-animation="bounceInLeft" data-delay="1s">The way to learn and earn</h1>
+                      <p data-animation="fadeInUp" data-delay="1.3s">We providing expert facilities to learn computer education, easiest way beginner to advance level of computer skills.</p>
+                        <ul>
+                          <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Read More</a></li>
+                          <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Get Started</a></li>
+                        </ul>
+                  </div>
+                </div>
+              </div> 
+            </div> 
+        </div> 
+
+        <div class="single-slider bg_cover pt-150" style="background-image: url({{ url_for('static', filename='images/slider/s-2.jpg')}})" data-overlay="4">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-7 col-lg-9">
+                <div class="slider-cont">
+                  <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
+                    <p data-animation="fadeInUp" data-delay="1.3s">The main objective of an LMS is to manage the learning process... .</p>
+                      <ul>
+                        <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Read More</a></li>
+                        <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Get Started</a></li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+        
+        <div class="single-slider bg_cover pt-150" style="background-image: url({{ url_for('static', filename='images/slider/s-3.jpg')}})" data-overlay="4">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-7 col-lg-9">
+                <div class="slider-cont">
+                  <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
+                    <p data-animation="fadeInUp" data-delay="1.3s">Lorem ipsum labore voluptate quisquam fugit!.</p>
+                      <ul>
+                        <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Read More</a></li>
+                        <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Get Started</a></li>
+                      </ul>
+                </div>
+              </div>
+            </div> 
+          </div> 
+        </div> 
+    </section>
+
+    
+    
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    {% endblock %}
+  </body>
+</html>

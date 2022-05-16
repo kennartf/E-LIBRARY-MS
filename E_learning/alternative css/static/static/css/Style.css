@@ -1,0 +1,10 @@
+
+/*navbar*/
+.navbar {
+  background-color: rgb(80, 77, 77) !important;
+  border-bottom: 2px solid #3f4041;
+}
+
+.navbar img {
+  max-width: 100%;
+}

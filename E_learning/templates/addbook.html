@@ -1,0 +1,70 @@
+{% extends 'admin_bookmaster.html' %} 
+
+
+{% block head %}
+<title>{% block title %}Admin Dashboard{% endblock %}</title>
+
+<!-- Custom bootsrap Styling -->
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/css/bootstrap.min.css')}}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/js/bootstrap.min.js')}}"/>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-4.1.3/css/bootstrap.min.css')}}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-4.1.3/js/bootstrap.min.js')}}"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+{% endblock %} 
+
+{% block book %}
+
+{% with messages = get_flashed_messages(with_categories=True) %} 
+  {% if messages %} {% for category, message in messages %} 
+  {% if category == "error" %}
+
+  <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button class="close" data-dismiss="alert" type="button">&times;</button>
+  </div>
+
+  {% else %}
+  <div class="alert alert-success alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button class="close" data-dismiss="alert" type="button">&times;</button>
+  </div>
+{% endif %}{% endfor %}{% endif %}{% endwith %}
+
+<body style="background-color: #4286f4;">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Welcome to Admin Dasboard</h1>
+  <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" href="#">
+    <i class="fas fa-download fa-sm text-white-50"></i> <strong>Generate Report</strong></a>
+</div>
+<br>
+
+<body class="bg-gradient-primary">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="h4 text-gray-900 mb-4">Books Upload!</h1>
+      </div>
+
+      <form action="#" enctype="multipart/form-data" method="POST">
+        {{ form.hidden_tag() }} 
+        {{ form.stb_title(class='form-control',) }}
+        <br />
+        {{ form.th_auth(class='form-control') }} 
+        <br>
+        {{ form.bok_profile(class='form-control') }} 
+        <br />
+        {{ form.my_category(class='form-control') }} 
+        <br />
+        {{ form.nm_issuerer(class='form-control') }} 
+        <br />
+        {{ form.submit(class='btn btn-primary btn-user btn-block') }}
+        <hr />
+      </form>   
+    </div>
+</body>
+{%endblock%}

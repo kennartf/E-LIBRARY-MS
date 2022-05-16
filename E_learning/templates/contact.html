@@ -1,0 +1,160 @@
+ {% extends 'home.html' %} 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head %}
+    <title>{% block title %}Contact Page{% endblock %}</title>
+
+    <!-- Custom bootsrap Styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.1.3/js/bootstrap.min.js')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/static/home.css')}}"/>
+
+    <link href="{{url_for('static', filename='css/slick.css')}}"rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/font-awesome.min.css')}}"rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/default.css')}}"rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/style.css')}}"rel="stylesheet"/>
+    <script src="{{url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/slick.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    {% endblock %} 
+  </head>
+
+  <body>
+    {% block content %}
+    <section
+      class="pt-105 pb-130 bg_cover" data-overlay="8" id="page-banner"
+      style="background-image: url({{url_for('static', filename='images/page-banner-6.jpg')}})">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-banner-cont">
+              <h2>Contact</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="{{ url_for('view.home')}}">Home</a></li>
+                  <li aria-current="page" class="breadcrumb-item active">
+                    Contact
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--====== CONTACT PART START ======-->
+    <section class="pt-90 pb-120 gray-bg" id="contact-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="contact-from mt-30">
+              <div class="section-title">
+                <h5>Contact Us</h5>
+                <h2>Keep in touch</h2>
+              </div>
+
+              <div class="main-form pt-45">
+                <form action="#" method="POST">
+                  {{ form.hidden_tag() }}
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="singel-form form-group">
+                        {{ form.name(class='form-control')}}
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="singel-form form-group">
+                        {{ form.student_id(class='form-control') }}
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="singel-form form-group">
+                        {{ form.subject(class='form-control') }}
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="singel-form form-group">
+                        {{ form.phone_number(class='form-control') }}
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="singel-form form-group">
+                        {{ form.text_area(class='form-control') }}
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <br>
+                      
+                    </div>
+                  </div>
+                  {{ form.submit(class='btn btn-primary btn-user btn-block') }}
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-5">
+            <div class="contact-address mt-30">
+              <ul>
+                <li>
+                  <div class="singel-address">
+                    <div class="icon">
+                      <i class="fa fa-home"></i>
+                    </div>
+                    <div class="cont">
+                      <p>Genius I.T Guys</p>
+                      <p>The Genius</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="singel-address">
+                    <div class="icon">
+                      <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="cont">
+                      <p>02043667574</p>
+                      <p>02034557777</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="singel-address">
+                    <div class="icon">
+                      <i class="fa fa-envelope-o"></i>
+                    </div>
+                    <div class="cont">
+                      <p>geniusitg@gmail.com</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="map mt-30">
+              <div id="contact-map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

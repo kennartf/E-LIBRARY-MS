@@ -1,0 +1,36 @@
+/*navbar*/
+.navbar {
+  background-color: rgb(80, 77, 77) !important;
+  border-bottom: 2px solid #3f4041;
+}
+
+
+.navigation.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #cecece;
+  -webkit-box-shadow: 0px 0px 191px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 191px 0px rgba(0, 0, 0, 0.06);
+  -webkit-animation: sticky 2s;
+  animation: sticky 2s;
+}
+
+/*navbar items*/
+.navbar, .brand,
+a {
+  /* background-color: rgb(80, 77, 77) !important; */
+  color: rgb(255, 255, 255) !important;
+}
+
+/*navbar items*/
+.modal-login a {
+  color: rgb(39, 55, 199) !important;
+}
+
+.navbar img {
+  max-width: 100%;
+}
